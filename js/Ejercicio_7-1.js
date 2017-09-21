@@ -6,7 +6,6 @@ function escribe(texto){
 }
 
 function ponfecha(){
-// Aqui se tiene que poner el código que haga lo que pide el enunciado.
 	var d = new Date(); //obtiene tipo: Mon Mar 27 2017 19:07:38 GTM+0300
 	var dia_semana = d.getDay(); //obtiene un número del array: [0] = domingo
 
@@ -27,4 +26,17 @@ function ponfecha(){
 
 
 	escribe("Hoy es <b>"+ texto_dia_semana+" "+dia +" de "+ texto_mes + " de " + anno+"</b>");
+}
+
+function ponhora(){
+	var d = new Date();
+
+	var hora = d.getHours();
+	var minutos = d.getMinutes();
+	var segundos = d.getSeconds();
+
+	escribe("<h1>" + hora + ":" + minutos + ":" + segundos+"<h1>");
+	t=setTimeout (function(){
+		ponhora()
+	},500);
 }
