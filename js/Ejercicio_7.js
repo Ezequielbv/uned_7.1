@@ -28,10 +28,10 @@ function ponfecha(){
 	escribe("Hoy es <b>"+ texto_dia_semana+" "+dia +" de "+ texto_mes + " de " + anno+"</b>");
 }
 
-// La función escribe() tiene un parámetro de entrada con una cadena de texto con el código
+// La función anota() tiene un parámetro de entrada con una cadena de texto con el código
 // HTML que se quiere mostrar dentro de la capa con ID "cuadro_texto". Esta función el alumno
 // tiene que usarla pero no es necesario modificarla
-function escribe(texto){
+function anota(texto){
 	document.getElementById("cuadro_txt_time").innerHTML=texto;
 }
 
@@ -42,7 +42,7 @@ function ponhora(){
 	var minutos = d.getMinutes();
 	var segundos = d.getSeconds();
 
-	escribe("<h1>" + hora + ":" + minutos + ":" + segundos+"<h1>");
+	anota("<h1>" + hora + ":" + minutos + ":" + segundos+"<h1>");
 	t=setTimeout (function(){
 		ponhora()
 	},500);
