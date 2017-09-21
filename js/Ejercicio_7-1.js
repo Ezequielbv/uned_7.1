@@ -2,7 +2,7 @@
 // HTML que se quiere mostrar dentro de la capa con ID "cuadro_texto". Esta función el alumno
 // tiene que usarla pero no es necesario modificarla
 function escribe(texto){
-	document.getElementById("cuadro_txt_date").innerHTML=texto;
+	document.getElementById("cuadro_texto").innerHTML=texto;
 }
 
 function ponfecha(){
@@ -26,21 +26,4 @@ function ponfecha(){
 
 
 	escribe("Hoy es <b>"+ texto_dia_semana+" "+dia +" de "+ texto_mes + " de " + anno+"</b>");
-}
-
-function escribe(texto){
-	document.getElementById("cuadro_txt_time").innerHTML=texto;
-}
-
-function ponhora(){
-	var d = new Date();
-
-	var hora = d.getHours();
-	var minutos = d.getMinutes();
-	var segundos = d.getSeconds();
-
-	escribe("<h1>" + hora + ":" + minutos + ":" + segundos+"<h1>");
-	t=setTimeout (function(){
-		ponhora()
-	},500);
 }
